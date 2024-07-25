@@ -108,7 +108,7 @@
 
     .insta__logo {
         display: flex;
-        padding: 10px;
+        margin-top: 9px;
     }
 
     .sidenav__button>span {

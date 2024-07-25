@@ -1,10 +1,17 @@
 .suggestions{
     margin-top: 25px;
     margin-right: 25px;
-    margin-left: 5px;
+    margin-left: 50px;
+
 }
 
 .suggestions__title{
     color: gray;
     font-weight: bold;
+}
+
+@media screen and (max-width: 870px) {
+    .suggestions{
+    display: none;
+    }
 }

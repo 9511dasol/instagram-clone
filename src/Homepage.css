@@ -14,8 +14,12 @@
 @media screen and (max-width: 899px) {
     .homepage__nav {
         min-width: 58px;
+        flex: 0.1;
     }
-
+    
+    .homepage__timeline {
+        flex: 0.9;
+    }
 }
 
 @media screen and (max-width: 599px) {

@@ -42,13 +42,14 @@ function Sidenav() {
         alt="Instagram Logo"
       />
       <div className="insta__logo">
-        <InstagramIcon className="insta__logo" />
+        <button className="sidenav__button">
+          <InstagramIcon className="insta__logo" />
+        </button>
       </div>
 
       <div className="sidenav__buttons">
         <button className="sidenav__button">
           <HomeIcon />
-
           <span>홈</span>
         </button>
         <button className="sidenav__button" id="search">
