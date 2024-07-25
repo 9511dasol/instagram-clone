@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Sidenav.css";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
@@ -17,14 +17,18 @@ import { signOut } from "firebase/auth";
 
 function Sidenav() {
   const user = useSelector((state: RootState) => state.data.user);
+  const [hide, setHide] = useState<boolean>(false);
   const dispatch = useDispatch();
   const handleLogout = () => {
     dispatch(logoutUser());
     dispatch(setLoading(false));
     signOut(auth);
   };
+  const show = () => {
+    setHide(hide? false :true);
+  };
   return (
-    <div className="sidenav">
+    <div className="sidenav"> 
       <img
         className="sidenav__logo"
         src="https://www.pngkey.com/png/full/828-8286178_mackeys-work-needs-no-elaborate-presentation-or-distracting.png"
@@ -60,7 +64,7 @@ function Sidenav() {
           <span>Create</span>
         </button>
         <button className="sidenav__button" id="profile">
-          <Avatar sx={{width:24, height:24}}>
+          <Avatar sx={{ width: 24, height: 24 }}>
             {user.userName?.charAt(0).toUpperCase()}
           </Avatar>
           <span>Profile</span>
@@ -68,30 +72,36 @@ function Sidenav() {
       </div>
       <div className="sidenav__more">
         <div className="hide">
-        <button onClick={handleLogout} className="logout__button">
-          Log out
-        </button>
-        <button onClick={handleLogout} className="logout__button">
-          Log out
-        </button>
-        <button onClick={handleLogout} className="logout__button">
-          Log out
-        </button>
-        <button onClick={handleLogout} className="logout__button">
-          Log out
-        </button>
-        <button onClick={handleLogout} className="logout__button">
-          Log out
-        </button>
-        <button onClick={handleLogout} className="logout__button">
-          Log out
-        </button>
-        <button onClick={handleLogout} className="logout__button">
-          Log out
-        </button> 
+          {hide ? (
+            <>
+              <button onClick={handleLogout} className="logout__button">
+                Log out
+              </button>
+              <button onClick={handleLogout} className="logout__button">
+                Log out
+              </button>
+              <button onClick={handleLogout} className="logout__button">
+                Log out
+              </button>
+              <button onClick={handleLogout} className="logout__button">
+                Log out
+              </button>
+              <button onClick={handleLogout} className="logout__button">
+                Log out
+              </button>
+              <button onClick={handleLogout} className="logout__button">
+                Log out
+              </button>
+              <button onClick={handleLogout} className="logout__button">
+                Log out
+              </button>
+            </>
+          ) : (
+            <></>
+          )}
         </div>
 
-        <button className="sidenav__button">
+        <button onClick={show} className="sidenav__button">
           <MenuIcon />
           <span>More</span>
         </button>
