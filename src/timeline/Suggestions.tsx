@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Suggestions.css";
 import { Avatar } from "@mui/material";
 interface suggestion {
@@ -11,6 +11,10 @@ interface SuggestionsProps {
 }
 
 function Suggestions({ suggest }: SuggestionsProps) {
+  const [clicked, setClicked] = useState<boolean>(true);
+  const click = () => {
+    setClicked(clicked ? false : true);
+  }
   return (
     <div className="suggestions">
       <div className="suggestions__title">Suggestions for you</div>
@@ -26,7 +30,7 @@ function Suggestions({ suggest }: SuggestionsProps) {
                 <span className="relation">{relation}</span>
               </div>
             </div>
-            <button className="follow__button">Follow</button>
+            {clicked ? (<button className="follow__button" onClick={click}>Follow</button>) : (<button className="follow__button" onClick={click}>UnFollow</button>)}
           </div>
         ))}
       </div>

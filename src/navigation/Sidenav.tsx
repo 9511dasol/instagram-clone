@@ -23,6 +23,7 @@ import { signOut } from "firebase/auth";
 function Sidenav() {
   const user = useSelector((state: RootState) => state.data.user);
   const [hide, setHide] = useState<boolean>(false);
+
   const dispatch = useDispatch();
   const handleLogout = () => {
     dispatch(logoutUser());
@@ -76,7 +77,7 @@ function Sidenav() {
         </button>
       </div>
       <div className="sidenav__more">
-        <div className="hide">
+        <div className="hide" style={{border: hide? "0.1px solid gray": "0" }}>
           {hide ? (
             <>
               <div onClick={handleLogout} className="hide__button">

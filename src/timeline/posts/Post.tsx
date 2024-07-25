@@ -83,7 +83,7 @@ function Post({ user, postImage, likes, timestamp }: Post) {
             <BookmarkBorderIcon className="postIcon" />
           </div>
         </div>
-        Liked by {Liked} people
+        좋아요 {Liked}개
       </div>
     </div>
   );

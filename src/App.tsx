@@ -9,7 +9,7 @@ import { loginUser, setLoading } from "./features/userSlice";
 
 function App() {
   const dispatch = useDispatch();
-
+  alert("pc만 구현 \n모바일도 구현 예정")
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {

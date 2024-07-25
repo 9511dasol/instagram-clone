@@ -8,7 +8,9 @@ function Login() {
 
   const handleLogin = () =>{
     signInWithEmailAndPassword(auth, email, password).catch((err)=>{
-      console.log(err);
+      alert("아이디 또는 비빌번호가 틀립니다.");
+      setEmail("");
+      setPassword("");
     });
   }
 
@@ -21,13 +23,13 @@ function Login() {
       <input
         onChange={(e) => setEmail(e.target.value)}
         type="email"
-        placeholder="Email"
+        placeholder="이메일"
         value={email}
       />
       <input
         onChange={(e) => setPassword(e.target.value)}
         type="password"
-        placeholder="Password"
+        placeholder="비밀번호"
         value={password}
       />
       <button onClick={handleLogin}>Log in</button>

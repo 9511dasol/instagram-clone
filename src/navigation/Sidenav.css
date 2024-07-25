@@ -63,7 +63,6 @@
 .hide {
     display: flex;
     flex-direction: column;
-    border: 0.1px solid gray;
     display: inline-flex;
     margin: 0 0 0 15px;
     padding: 5px;
