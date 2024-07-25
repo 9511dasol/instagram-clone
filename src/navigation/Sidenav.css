@@ -66,6 +66,28 @@
     border: 0.1px solid gray;
     display: inline-flex;
     margin: 0 0 0 15px;
+    padding: 5px;
     z-index: 1;
     background: 0;
+}
+
+.hide__button{
+    padding: 10px;
+    margin: 1px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hide__button:hover{
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.224);
+
+}
+
+.hide__button span{
+    font-size: 15px;
+    text-align: center;
+    margin-left: 5px;
 }

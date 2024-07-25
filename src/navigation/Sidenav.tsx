@@ -7,8 +7,13 @@ import SlideshowIcon from "@mui/icons-material/Slideshow";
 import ChatIcon from "@mui/icons-material/Chat";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import Brightness6Icon from '@mui/icons-material/Brightness6';
+import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import MenuIcon from "@mui/icons-material/Menu";
+import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined';
+import DoneAllOutlinedIcon from '@mui/icons-material/DoneAllOutlined';
 import { Avatar } from "@mui/material";
+import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../app/store";
 import { auth } from "../firebase";
@@ -25,10 +30,10 @@ function Sidenav() {
     signOut(auth);
   };
   const show = () => {
-    setHide(hide? false :true);
+    setHide(hide ? false : true);
   };
   return (
-    <div className="sidenav"> 
+    <div className="sidenav">
       <img
         className="sidenav__logo"
         src="https://www.pngkey.com/png/full/828-8286178_mackeys-work-needs-no-elaborate-presentation-or-distracting.png"
@@ -37,64 +42,69 @@ function Sidenav() {
       <div className="sidenav__buttons">
         <button className="sidenav__button">
           <HomeIcon />
-          <span>Home</span>
+          <span>홈</span>
         </button>
         <button className="sidenav__button">
           <SearchIcon />
-          <span>Search</span>
+          <span>검색</span>
         </button>
         <button className="sidenav__button">
           <ExploreIcon />
-          <span>Explore</span>
+          <span>탐색 탭</span>
         </button>
         <button className="sidenav__button">
           <SlideshowIcon />
-          <span>Reels</span>
+          <span>릴스</span>
         </button>
         <button className="sidenav__button">
           <ChatIcon />
-          <span>Messages</span>
+          <span>메세지</span>
         </button>
         <button className="sidenav__button">
           <FavoriteBorderIcon />
-          <span>Notifications</span>
+          <span>알림</span>
         </button>
         <button className="sidenav__button">
           <AddCircleOutlineIcon />
-          <span>Create</span>
+          <span>만들기</span>
         </button>
         <button className="sidenav__button" id="profile">
           <Avatar sx={{ width: 24, height: 24 }}>
             {user.userName?.charAt(0).toUpperCase()}
           </Avatar>
-          <span>Profile</span>
+          <span>프로필</span>
         </button>
       </div>
       <div className="sidenav__more">
         <div className="hide">
           {hide ? (
             <>
-              <button onClick={handleLogout} className="logout__button">
-                Log out
-              </button>
-              <button onClick={handleLogout} className="logout__button">
-                Log out
-              </button>
-              <button onClick={handleLogout} className="logout__button">
-                Log out
-              </button>
-              <button onClick={handleLogout} className="logout__button">
-                Log out
-              </button>
-              <button onClick={handleLogout} className="logout__button">
-                Log out
-              </button>
-              <button onClick={handleLogout} className="logout__button">
-                Log out
-              </button>
-              <button onClick={handleLogout} className="logout__button">
-                Log out
-              </button>
+              <div onClick={handleLogout} className="hide__button">
+                <SettingsSuggestOutlinedIcon />
+                <span>설정</span>
+              </div>
+              <div onClick={handleLogout} className="hide__button">
+                <DoneAllOutlinedIcon />
+                <span>내 활동</span>
+              </div>
+              <div onClick={handleLogout} className="hide__button">
+                <BookmarkBorderIcon />
+                <span>저장됨</span>
+              </div>
+              <div onClick={handleLogout} className="hide__button">
+                <Brightness6Icon />
+                <span>모드 전환</span>
+              </div>
+              <div onClick={handleLogout} className="hide__button">
+                <ReportGmailerrorredIcon />
+                <span>문제 신고</span>
+              </div>
+              <div onClick={handleLogout} className="hide__button">
+                <span>계정 전환</span>
+              </div>
+              <div onClick={handleLogout} className="hide__button">
+                <span>로그아웃</span>
+              </div>
             </>
           ) : (
             <></>

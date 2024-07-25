@@ -7,8 +7,8 @@ import Signup from "./Signup";
 function Authentication() {
   const [active, SetActive] = useState<string>('login');
 
-  const handelChange = () =>{
-    SetActive(active === 'login'? 'sign up!':'login');
+  const handelChange = () => {
+    SetActive(active === 'login' ? 'sign up!' : 'login');
   }
   return (
     <div className="authentication">
@@ -16,16 +16,16 @@ function Authentication() {
         <img src="https://i.imgur.com/P3Vm1Kq.png" />
       </div>
       <div className="auth__right">
-      {active === "login" ? 
-      <Login />
-      :
-      <Signup SetActive={SetActive}/>}
+        {active === "login" ?
+          <Login />
+          :
+          <Signup SetActive={SetActive} />}
         <div className="auth__more">
           <span>
-            {active === "login" ? 
-            <>Don't have an account ? <button onClick={handelChange}>Sign up</button></> 
-            :
-             <>Have an account ? <button onClick={handelChange}>Log in</button></>}
+            {active === "login" ?
+              <>계정이 없으신가요 ? <button onClick={handelChange}>회원가입</button></>
+              :
+              <>계정이 있으신가요 ? <button onClick={handelChange}>로그인</button></>}
           </span>
         </div>
       </div>

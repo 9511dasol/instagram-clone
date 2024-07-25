@@ -55,19 +55,19 @@ function Signup({SetActive}: ChildComponentProps) {
       <input
         onChange={(e) => setEmail(e.target.value)}
         type="email"
-        placeholder="Email"
+        placeholder="이메일"
         value={email}
       />
       <input
         onChange={(e) => setUsername(e.target.value)}
         type="text"
-        placeholder="Username"
+        placeholder="이름"
         value={username}
       />
       <input
         onChange={(e) => setPassword(e.target.value)}
         type="password"
-        placeholder="Password"
+        placeholder="비밀번호"
         value={password}
       />
       <button onClick={handlesignup}>Sign up</button>
