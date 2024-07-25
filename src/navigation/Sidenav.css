@@ -1,4 +1,4 @@
-.sidenav{
+.sidenav {
     position: fixed;
     display: flex;
     flex-direction: column;
@@ -6,17 +6,21 @@
     z-index: 3;
 }
 
-.sidenav__logo{
+.sidenav__logo {
     width: 120px;
     margin: 25px;
 }
 
-.sidenav__buttons{
+.insta__logo {
+    display: none;
+}
+
+.sidenav__buttons {
     display: flex;
     flex-direction: column;
 }
 
-.sidenav__button{
+.sidenav__button {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -28,22 +32,23 @@
     border-radius: 15px;
 }
 
-.sidenav__button:hover{
+.sidenav__button:hover {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.128);
 }
 
-.sidenav__button > span{
+.sidenav__button>span {
     font-size: 18px;
     font-weight: bolder;
     margin-left: 10px;
 }
 
-.sidenav__more{
+.sidenav__more {
     position: fixed;
     bottom: 3px;
 }
-.logout__button{
+
+.logout__button {
     font-size: 15px;
     border-radius: 10px;
     font-weight: bold;
@@ -55,7 +60,7 @@
 
 }
 
-.logout__button:hover{
+.logout__button:hover {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.424);
 }
@@ -70,7 +75,7 @@
     background: 0;
 }
 
-.hide__button{
+.hide__button {
     padding: 10px;
     margin: 1px;
     border-radius: 6px;
@@ -79,14 +84,70 @@
     align-items: center;
 }
 
-.hide__button:hover{
+.hide__button:hover {
     cursor: pointer;
     background-color: rgba(255, 255, 255, 0.224);
 
 }
 
-.hide__button span{
+.hide__button span {
     font-size: 15px;
     text-align: center;
     margin-left: 5px;
+}
+
+@media screen and (max-width: 899px) {
+    .sidenav {
+        min-width: 40px;
+        width: 40px;
+    }
+
+    .sidenav__logo {
+        display: none;
+    }
+
+    .insta__logo {
+        display: flex;
+        padding: 10px;
+    }
+
+    .sidenav__button>span {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 599px) {
+    .sidenav {
+        display: flex;
+        width: 100%;
+        bottom: 0px;
+        background-color: black;
+        padding: 10px 0 10px 0;
+    }
+
+    .insta__logo {
+        display: none;
+    }
+
+    .sidenav__buttons {
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 5px;
+    }
+
+    .sidenav__more {
+        display: none;
+    }
+
+    #search {
+        display: none;
+    }
+
+    #dm {
+        display: none;
+    }
+
+    #liked {
+        display: none;
+    }
 }

@@ -7,18 +7,19 @@ import SlideshowIcon from "@mui/icons-material/Slideshow";
 import ChatIcon from "@mui/icons-material/Chat";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import Brightness6Icon from '@mui/icons-material/Brightness6';
+import Brightness6Icon from "@mui/icons-material/Brightness6";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import MenuIcon from "@mui/icons-material/Menu";
-import SettingsSuggestOutlinedIcon from '@mui/icons-material/SettingsSuggestOutlined';
-import DoneAllOutlinedIcon from '@mui/icons-material/DoneAllOutlined';
+import SettingsSuggestOutlinedIcon from "@mui/icons-material/SettingsSuggestOutlined";
+import DoneAllOutlinedIcon from "@mui/icons-material/DoneAllOutlined";
 import { Avatar } from "@mui/material";
-import ReportGmailerrorredIcon from '@mui/icons-material/ReportGmailerrorred';
+import ReportGmailerrorredIcon from "@mui/icons-material/ReportGmailerrorred";
 import { useDispatch, useSelector } from "react-redux";
 import { AppDispatch, RootState } from "../app/store";
 import { auth } from "../firebase";
 import { logoutUser, setLoading } from "../features/userSlice";
 import { signOut } from "firebase/auth";
+import InstagramIcon from "@mui/icons-material/Instagram";
 
 function Sidenav() {
   const user = useSelector((state: RootState) => state.data.user);
@@ -40,12 +41,17 @@ function Sidenav() {
         src="https://www.pngkey.com/png/full/828-8286178_mackeys-work-needs-no-elaborate-presentation-or-distracting.png"
         alt="Instagram Logo"
       />
+      <div className="insta__logo">
+        <InstagramIcon className="insta__logo" />
+      </div>
+
       <div className="sidenav__buttons">
         <button className="sidenav__button">
           <HomeIcon />
+
           <span>홈</span>
         </button>
-        <button className="sidenav__button">
+        <button className="sidenav__button" id="search">
           <SearchIcon />
           <span>검색</span>
         </button>
@@ -57,11 +63,11 @@ function Sidenav() {
           <SlideshowIcon />
           <span>릴스</span>
         </button>
-        <button className="sidenav__button">
+        <button className="sidenav__button" id="dm">
           <ChatIcon />
           <span>메세지</span>
         </button>
-        <button className="sidenav__button">
+        <button className="sidenav__button" id="liked">
           <FavoriteBorderIcon />
           <span>알림</span>
         </button>
@@ -77,7 +83,10 @@ function Sidenav() {
         </button>
       </div>
       <div className="sidenav__more">
-        <div className="hide" style={{border: hide? "0.1px solid gray": "0" }}>
+        <div
+          className="hide"
+          style={{ border: hide ? "0.1px solid gray" : "0" }}
+        >
           {hide ? (
             <>
               <div onClick={handleLogout} className="hide__button">

@@ -34,7 +34,7 @@ function Post({ user, postImage, likes, timestamp }: Post) {
       </div>
       <div className="post__footer">
         <div className="post__footerIcons">
-          <div className="post__footerIcons">
+          <div className="post__footerIcon">
             <button
               onClick={() => {
                 if (Liked === likes) {
