@@ -7,14 +7,9 @@ import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import BookmarkBorderIcon from "@mui/icons-material/BookmarkBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-interface Post {
-  user: string;
-  postImage: string;
-  likes: number;
-  timestamp: string;
-}
+import { Posts as post } from "../Ingredients";
 
-function Post({ user, postImage, likes, timestamp }: Post) {
+function Post({ user, postImage, likes, timestamp }: post) {
   const [Liked, setLiked] = useState<number>(likes);
   const [cLiked, setCLiked] = useState<boolean>(false);
   return (
@@ -27,7 +22,7 @@ function Post({ user, postImage, likes, timestamp }: Post) {
           <span style={{ color: "white", marginRight: 1 }}>{user}</span> •{" "}
           <span style={{ marginLeft: 2 }}>{timestamp}</span>
         </div>
-        <MoreHorizIcon />
+        <MoreHorizIcon style={{ cursor: "pointer" }} onClick={() => alert("준비중")} />
       </div>
       <div className="post__image">
         <img src={postImage} alt="" />

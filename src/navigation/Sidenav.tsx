@@ -90,27 +90,27 @@ function Sidenav() {
         >
           {hide ? (
             <>
-              <div onClick={handleLogout} className="hide__button">
+              <div onClick={()=>alert("준비중")} className="hide__button">
                 <SettingsSuggestOutlinedIcon />
                 <span>설정</span>
               </div>
-              <div onClick={handleLogout} className="hide__button">
+              <div onClick={()=>alert("준비중")} className="hide__button">
                 <DoneAllOutlinedIcon />
                 <span>내 활동</span>
               </div>
-              <div onClick={handleLogout} className="hide__button">
+              <div onClick={()=>alert("준비중")} className="hide__button">
                 <BookmarkBorderIcon />
                 <span>저장됨</span>
               </div>
-              <div onClick={handleLogout} className="hide__button">
+              <div onClick={()=>alert("준비중")} className="hide__button">
                 <Brightness6Icon />
                 <span>모드 전환</span>
               </div>
-              <div onClick={handleLogout} className="hide__button">
+              <div onClick={()=>alert("준비중")} className="hide__button">
                 <ReportGmailerrorredIcon />
                 <span>문제 신고</span>
               </div>
-              <div onClick={handleLogout} className="hide__button">
+              <div onClick={()=>alert("준비중")} className="hide__button">
                 <span>계정 전환</span>
               </div>
               <div onClick={handleLogout} className="hide__button">

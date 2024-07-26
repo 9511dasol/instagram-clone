@@ -1,15 +1,6 @@
-import React, { useState } from "react";
 import "./Suggestions.css";
-import { Avatar } from "@mui/material";
 import Suggperson from "./Suggperson";
-interface suggestion {
-  username: string;
-  relation: string;
-}
-
-interface SuggestionsProps {
-  suggest: suggestion[];
-}
+import { SuggestionsProps } from "./Ingredients";
 
 function Suggestions({ suggest }: SuggestionsProps) {
   

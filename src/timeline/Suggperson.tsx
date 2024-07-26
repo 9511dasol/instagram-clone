@@ -1,13 +1,9 @@
 import { Avatar } from "@mui/material";
 import React, { useState } from "react";
 import "./Suggperson.css"
-interface recommend{
-    idx:number;
-    username: string;
-    relation: string;
-}
+import { recommend as Recommend } from "./Ingredients";
 
-function Suggperson({username, relation, idx}:recommend) {
+function Suggperson({username, relation, idx}:Recommend) {
   const [clicked, setClicked] = useState<boolean>(true);
   const click = () => {
     setClicked(clicked ? false : true);
