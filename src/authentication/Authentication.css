@@ -14,7 +14,7 @@
 
 .auth__right {
     flex: 0.5;
-    max-width: 600px;
+    max-width: 500px;
     max-height: 700px;
 }
 
@@ -48,3 +48,14 @@
     cursor: pointer;
 }
 
+
+@media screen and (max-width: 599px) {
+    .auth__left{
+        flex: 0;
+        display: none;
+    }
+    .auth__right {
+        flex: 1;
+
+    }
+}
