@@ -8,7 +8,7 @@
 - 24.07.22 - ing
 
 ### 맴버 구성(인스타그램 클론 코딩) 🧑‍🤝‍🧑
-- 한다솔: 백엔드, 프론트엔
+- 한다솔: 백엔드, 프론트엔드 
 
 ### 개발 환경 ⚙️
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
