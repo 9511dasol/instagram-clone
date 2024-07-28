@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/instagram-clone/static/css/main.b57b2528.css",
+    "main.css": "/instagram-clone/static/css/main.23159bf9.css",
     "main.js": "/instagram-clone/static/js/main.89080220.js",
     "index.html": "/instagram-clone/index.html",
-    "main.b57b2528.css.map": "/instagram-clone/static/css/main.b57b2528.css.map",
+    "main.23159bf9.css.map": "/instagram-clone/static/css/main.23159bf9.css.map",
     "main.89080220.js.map": "/instagram-clone/static/js/main.89080220.js.map"
   },
   "entrypoints": [
-    "static/css/main.b57b2528.css",
+    "static/css/main.23159bf9.css",
     "static/js/main.89080220.js"
   ]
 }
